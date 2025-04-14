@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ee9ca7;
+}
+
+.container {
+    width: 590px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Mengatur posisi ke kiri */
+    margin: 20px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    padding: 15px;
+    color: #e96888;
+    background-color: white;
+    position: relative;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+.description {
+    font-size: 13px;
+    color: #e96888;
+    margin-top: 30px; /* Beri sedikit jarak dari "To Do List" */
+    left: 10;
+    position: absolute; /* Tambahkan ini */
+    bottom: 10px; 
+}
+.logout {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 0;  /* Menempel ke kiri */
+    top: 50%;
+    transform: translateY(-50%); /* Tengah-tengah vertikal */
+}
+
+.logout button {
+    background-color: #e96888;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logout button:hover {
+    background-color: #d85675;
+}
+.back-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #e27b84; /* Warna tombol */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left; /* Teks rata kiri */
+    width: 100px; 
+}
+.back-button:hover {
+    background-color: #d06b75; /* Warna saat hover */
+}
+.header .title {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row; 
+    gap: 10px; 
+}
+
+.header .title i {
+    font-size: 24px;
+    color: #e96888;
+}
+
+.header .title span {
+    font-size: 18px;
+    white-space: nowrap; 
+    line-height: 1.2;
+}
+.header .description {
+    font-size: 13px;
+}
+
+.content {
+    padding: 15px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-satu {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.input-control {
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #ee9ca7;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-black {
+    color: black;
+}
+
+.task-item.done span {
+    text-decoration: line-through;
+    color: #ccc;
+}
+.logout {
+    margin-left: 350px;
+}
+task-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+.priority {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-align: left; 
+    margin-right: auto; 
+    display: inline-block;
+   
+}
+.priority.low {
+    background-color: #d4edda;
+    color: #155724;
+    
+}
+.priority.high {
+    background-color: #f8d7da;
+    color: #721c24;
+
+}
+.deadline {
+    background-color: #ffeeba;
+    color: #856404;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+
+.task-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 10px; 
+    
+}
+.task-details .priority-title {
+    margin-right: auto; 
+    font-weight: bold;
+    font-size: 14px;
+}
+.subtasks {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.subtask-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.subtask-item.done span {
+    text-decoration: line-through;
+    color: #ccc;
+}
+.bx-trash {
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.bx-trash:hover {
+    color: black;
+}
+.container h1 {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10;
+}
+a {
+    margin-bottom: 10px; 
+    color: #fff; 
+    text-decoration: none;
+    text-align: left;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    margin-top: 10px;
+    padding: 10px 0; 
+    text-align: center; 
+}
+.subtask-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   
+}
+
+.subtask-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+    color: #333;
+    font-size: 16px;
+   
+}
+
+.subtask-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.subtask-item a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 20px;
+}
+.back-to-tasks {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Memposisikan teks ke kiri */
+    background-color: #e96888;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: fit-content; /* Buat tombol memenuhi lebar */
+    text-align: left;
+}
+
+.back-to-tasks:hover {
+    background-color: #d85675;
+}
+
+.back-to-tasks i {
+    margin-right: 20px;
+    font-size: 18px;
+    color:white;
+}
