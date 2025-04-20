@@ -5,7 +5,7 @@ include 'database.php';
     $q_select = "select * from tasks where taskid = '".$_GET['id']."' ";
     $run_q_select = mysqli_query($conn, $q_select);
     $d = mysqli_fetch_object($run_q_select);
-    // proses edit data 
+    // proses  
     if(isset($_POST['edit'])){
         $q_update = "update tasks set tasklabel = '".$_POST['task']."' where taskid =  '".$_GET['id']."' ";
         $run_q_update = mysqli_query($conn, $q_update);
@@ -20,7 +20,7 @@ include 'database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">         
     <title>To Do List</title>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-<link rel="stylesheet" href="sala22.css">
+<link rel="stylesheet" href="salaa22.css">
   
 </head>
 <body>

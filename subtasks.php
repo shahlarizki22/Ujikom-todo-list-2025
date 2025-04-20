@@ -61,7 +61,7 @@ if (isset($_GET['delete_subtask'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subtasks for <?= $task['tasklabel'] ?></title>
-    <link rel="stylesheet" href="sal22.css">
+    <link rel="stylesheet" href="salaa22.css">
    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
    
 </head>
@@ -85,6 +85,9 @@ if (isset($_GET['delete_subtask'])) {
                         <?= $subtask['subtaskstatus'] == 'close' ? 'checked' : '' ?>
                     >
                     <span><?= $subtask['subtasklabel'] ?></span>
+
+                    
+
                     <a href="?taskid=<?= $taskid ?>&delete_subtask=<?= $subtask['subtaskid'] ?>" 
                      onclick="return confirm('Delete this subtask?')">
                         <i class="bx bx-trash"></i>

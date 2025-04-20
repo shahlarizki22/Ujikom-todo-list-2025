@@ -7,7 +7,13 @@ if (isset($_POST["register"])) {
         echo "<script>alert('User baru berhasil ditambahkan');</script>";
         $_SESSION["login"] = true;
         $_SESSION["username"] = $_POST["username"];
-        header("Location: index.php");
+        echo"<script>
+            alert('User baru berhasil ditambahkan');
+            window.location.href = 'login.php';
+            </script>
+            ";
+
+       // header("Location: login.php");
         exit;
     } else {
         echo "<script>alert('Registrasi gagal');</script>";

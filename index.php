@@ -4,7 +4,7 @@ session_start();
 
 // Redirect jika belum login
 if (!isset($_SESSION['login'])) {
-    header("Location: login/index.php");
+    header("Location: login/index.php"); 
     exit;
 }
 
@@ -74,7 +74,7 @@ if (isset($_GET['done'])) {
 }
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="id">
 <head>
     <meta charset="utf-8">

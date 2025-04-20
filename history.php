@@ -20,7 +20,7 @@ if (!$run_q_history) {
 
 <!DOCTYPE html>
 <html lang="id">
-<head>git 
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>History</title>
