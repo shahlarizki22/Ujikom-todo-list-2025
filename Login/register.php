@@ -3,22 +3,29 @@ session_start();
 require 'functions.php';
 
 if (isset($_POST["register"])) {
-    if (register($_POST) > 0) {
-        echo "<script>alert('User baru berhasil ditambahkan');</script>";
-        $_SESSION["login"] = true;
-        $_SESSION["username"] = $_POST["username"];
-        echo"<script>
-            alert('User baru berhasil ditambahkan');
-            window.location.href = 'login.php';
-            </script>
-            ";
+    $password = $_POST["password"];
+    $password2 = $_POST["password2"];
 
-       // header("Location: login.php");
-        exit;
+    if (strlen($password) < 8) {
+        echo "<script>alert('Password harus terdiri dari minimal 8 karakter');</script>";
+    } elseif ($password !== $password2) {
+        echo "<script>alert('Konfirmasi password tidak cocok');</script>";
     } else {
-        echo "<script>alert('Registrasi gagal');</script>";
+        if (register($_POST) > 0) {
+            echo "<script>alert('User baru berhasil ditambahkan');</script>";
+            $_SESSION["login"] = true;
+            $_SESSION["username"] = $_POST["username"];
+            echo "<script>
+                    alert('User baru berhasil ditambahkan');
+                    window.location.href = 'login.php';
+                  </script>";
+            exit;
+        } else {
+            echo "<script>alert('Registrasi gagal');</script>";
+        }
     }
 }
+
 ?>
 
 <!DOCTYPE html>

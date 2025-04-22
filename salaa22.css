@@ -197,7 +197,12 @@ task-details {
     background-color: #f8d7da;
     color: #721c24;
 
-}
+} .priority.medium {
+    background-color: #f8d7da;
+     color: #571515;
+        
+    }
+
 .deadline {
     background-color: #ffeeba;
     color: #856404;

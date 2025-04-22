@@ -105,6 +105,7 @@ if (isset($_GET['done'])) {
                 <input type="text" name="task" class="input-control" placeholder="Add task" required>
                 <select name="priority" class="input-control" required>
                     <option value="Rendah">Prioritas Rendah</option>
+                    <option value="Sedang">Prioritas Sedang</option>
                     <option value="Tinggi">Prioritas Tinggi</option>
                 </select>
                 <input type="date" name="deadline" class="input-control" required>
@@ -126,7 +127,8 @@ if (isset($_GET['done'])) {
                             </div>
                         </div>
                         <div class="task-details">
-                            <small class="priority <?= strtolower($r['priority']) === 'tinggi' ? 'high' : 'low' ?>">
+                        <small class="priority 
+                                <?= strtolower($r['priority']) === 'tinggi' ? 'high' : (strtolower($r['priority']) === 'sedang' ? 'medium' : 'low') ?>">
                                 <?= ucfirst($r['priority']) ?>
                             </small>
                             <small class="deadline"><?= date("d M Y", strtotime($r['deadline'])) ?></small>
